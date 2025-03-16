@@ -32,10 +32,10 @@ nodes:
           hardwareAddr: "bc:24:11:7e:f6:29"
         dhcp: false
         addresses:
-          - "192.168.200.100/16"
+          - "192.168.200.100/24"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.8.1"
+            gateway: "192.168.200.1"
         mtu: 1500
         vip:
           ip: "192.168.200.10"
@@ -52,10 +52,10 @@ nodes:
           hardwareAddr: "bc:24:11:3b:4d:15"
         dhcp: false
         addresses:
-          - "192.168.200.101/16"
+          - "192.168.200.101/24"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.8.1"
+            gateway: "192.168.200.1"
         mtu: 1500
         vip:
           ip: "192.168.200.10"
@@ -72,10 +72,10 @@ nodes:
           hardwareAddr: "bc:24:11:52:ad:89"
         dhcp: false
         addresses:
-          - "192.168.200.102/16"
+          - "192.168.200.102/24"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.8.1"
+            gateway: "192.168.200.1"
         mtu: 1500
         vip:
           ip: "192.168.200.10"
