@@ -44,6 +44,7 @@ spec:
   values:
     replicaCount: 1
     ingress:
+      enabled: true
       className: internal
       hosts:
         - host: "{{ .Release.Name }}.${SECRET_DOMAIN}"
