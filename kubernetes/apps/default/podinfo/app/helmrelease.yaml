@@ -50,6 +50,7 @@ spec:
         - host: "{{ .Release.Name }}.${SECRET_DOMAIN}"
           paths:
             - path: /
+              pathType: Exact
               service:
                 identifier: app
                 port: http
