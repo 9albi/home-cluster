@@ -47,10 +47,7 @@ spec:
       enabled: true
       className: internal
       hosts:
-        - host: "{{ .Release.Name }}.${SECRET_DOMAIN}"
+        - host: "podinfo.${SECRET_DOMAIN}"
           paths:
             - path: /
               pathType: Exact
-              service:
-                identifier: app
-                port: http
