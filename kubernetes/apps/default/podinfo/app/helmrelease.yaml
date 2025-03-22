@@ -50,4 +50,4 @@ spec:
         - host: "podinfo.${SECRET_DOMAIN}"
           paths:
             - path: /
-              pathType: Exact
+              pathType: Prefix
