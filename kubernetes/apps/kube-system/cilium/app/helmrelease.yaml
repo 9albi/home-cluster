@@ -40,6 +40,12 @@ spec:
       ui:
         enabled: true
         rollOutPods: true
+        ingress:
+          enabled: true
+          className: internal
+          # annotations:
+          #   external-dns.alpha.kubernetes.io/target: "internal.${SECRET_DOMAIN}"
+          hosts: ["hubble.${SECRET_DOMAIN}"]
       metrics:
         enabled:
           - dns:query
