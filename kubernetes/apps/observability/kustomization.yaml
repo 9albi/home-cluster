@@ -6,4 +6,4 @@ namespace: observability
 components:
   - ../../components/common
 resources:
-  - ./prometheus/ks.yaml
+  - ./kube-prometheus-stack/ks.yaml
