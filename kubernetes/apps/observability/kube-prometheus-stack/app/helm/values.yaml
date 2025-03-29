@@ -82,3 +82,8 @@ kube-state-metrics:
 
 grafana:
   enabled: true
+  ingress:
+    enabled: true
+    ingressClassName: internal
+    hosts: ["grafana.${SECRET_DOMAIN}"]
+    pathType: Prefix
