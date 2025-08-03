@@ -57,7 +57,7 @@ nodes:
           - network: "0.0.0.0/0"
             gateway: "192.168.200.1"
         mtu: 1500
-  - hostname: "talos-worker-1"
+  - hostname: "talos-worker-2"
     ipAddress: "192.168.200.202"
     installDiskSelector:
       serial: "vda"

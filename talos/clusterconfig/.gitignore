@@ -1,4 +1,4 @@
+kubernetes-talos-control-1.yaml
+kubernetes-talos-worker-1.yaml
+kubernetes-talos-worker-2.yaml
 talosconfig
-kubernetes-talos-node-0.yaml
-kubernetes-talos-node-1.yaml
-kubernetes-talos-node-2.yaml
