@@ -3,14 +3,18 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: &app podinfo
-  namespace: &namespace default
+  name: &app cloudflare-dns
+  namespace: &namespace network
 spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
   interval: 1h
-  path: ./kubernetes/apps/default/podinfo/app
+  path: ./kubernetes/apps/network/cloudflare-dns
   postBuild:
     substituteFrom:
       - name: cluster-secrets
@@ -23,4 +27,4 @@ spec:
     namespace: flux-system
   targetNamespace: *namespace
   timeout: 5m
-  wait: false
+  wait: true
