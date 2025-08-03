@@ -20,7 +20,7 @@ cniConfig:
 
 nodes:
   - hostname: "talos-control-1"
-    ipAddress: "192.168.200.101"
+    ipAddress: "192.168.100.101"
     installDiskSelector:
       serial: "vda"
     machineSpec:
@@ -32,15 +32,15 @@ nodes:
           hardwareAddr: "bc:24:11:e6:55:28"
         dhcp: false
         addresses:
-          - "192.168.200.101/24"
+          - "192.168.100.101/16"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.200.1"
+            gateway: "192.168.0.1"
         mtu: 1500
         vip:
           ip: "192.168.200.10"
   - hostname: "talos-worker-1"
-    ipAddress: "192.168.200.201"
+    ipAddress: "192.168.200.101"
     installDiskSelector:
       serial: "vda"
     machineSpec:
@@ -52,13 +52,13 @@ nodes:
           hardwareAddr: "bc:24:11:33:f1:87"
         dhcp: false
         addresses:
-          - "192.168.200.201/24"
+          - "192.168.200.101/16"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.200.1"
+            gateway: "192.168.0.1"
         mtu: 1500
   - hostname: "talos-worker-2"
-    ipAddress: "192.168.200.202"
+    ipAddress: "192.168.200.102"
     installDiskSelector:
       serial: "vda"
     machineSpec:
@@ -70,10 +70,10 @@ nodes:
           hardwareAddr: "bc:24:11:78:d6:2c"
         dhcp: false
         addresses:
-          - "192.168.200.202/24"
+          - "192.168.200.102/16"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.200.1"
+            gateway: "192.168.0.1"
         mtu: 1500
 
 # Global patches
