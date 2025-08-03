@@ -1,26 +1,31 @@
-# variable "nodes" {
-#   description = "Node configuration for control planes and workers"
-#   type = object({
-#     controlplanes = map(object({
-#       name = string
-#       ip   = string
-#       vm = object({
-#         cores     = number
-#         memory    = number
-#         disk_size = number
-#       })
-#     }))
-#     workers = map(object({
-#       name = string
-#       ip   = string
-#       vm = object({
-#         cores     = number
-#         memory    = number
-#         disk_size = number
-#       })
-#     }))
-#   })
-# }
+variable "nodes" {
+  description = "Node configuration for control planes and workers"
+  type = object({
+    controlplanes = map(object({
+      name = string
+      ip   = string
+      vm = object({
+        cores     = number
+        memory    = number
+        disk_size = number
+      })
+    }))
+    workers = map(object({
+      name = string
+      ip   = string
+      vm = object({
+        cores     = number
+        memory    = number
+        disk_size = number
+      })
+    }))
+  })
+
+  default = {
+    controlplanes = {}
+    workers       = {}
+  }
+}
 
 variable "network" {
   description = "Network configuration"
